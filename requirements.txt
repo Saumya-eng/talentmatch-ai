@@ -1,0 +1,9 @@
+flask
+scikit-learn
+PyPDF2
+docx2txt
+werkzeug
+sentence-transformers==2.6.1
+torch==2.2.2
+numpy<2
+scipy
