@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import PyPDF2
 import docx2txt
 import os
@@ -78,7 +77,6 @@ def extract_text(file_path):
 
     else:
         print(f"[UNSUPPORTED FILE] {file_path}")
-=======
 import PyPDF2
 import docx2txt
 import os
@@ -158,5 +156,4 @@ def extract_text(file_path):
 
     else:
         print(f"[UNSUPPORTED FILE] {file_path}")
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90
         return ""

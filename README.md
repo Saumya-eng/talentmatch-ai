@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TalentMatch AI – Intelligent Resume Screening System
 
 An AI-powered resume matching system that analyzes resumes against job descriptions using **NLP + Machine Learning + Semantic Similarity** to rank candidates efficiently.
@@ -180,7 +179,6 @@ Aspiring Software + AI Engineer
 ---
 
 ## If you like this project, give it a star!
-=======
 # TalentMatch AI – Intelligent Resume Screening System
 
 An AI-powered resume matching system that analyzes resumes against job descriptions using **NLP + Machine Learning + Semantic Similarity** to rank candidates efficiently.
@@ -362,4 +360,3 @@ Aspiring Software + AI Engineer
 ---
 
 ## If you like this project, give it a star!
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90

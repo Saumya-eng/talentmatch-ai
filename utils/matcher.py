@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
@@ -91,7 +90,6 @@ def rank_resumes(resume_names, scores):
     results = list(zip(resume_names, scores))
     results.sort(key=lambda x: x[1], reverse=True)
 
-=======
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
@@ -184,5 +182,4 @@ def rank_resumes(resume_names, scores):
     results = list(zip(resume_names, scores))
     results.sort(key=lambda x: x[1], reverse=True)
 
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90
     return results

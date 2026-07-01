@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ---------------- FILE PREVIEW ---------------- //
 document.getElementById("files").addEventListener("change", function () {
     const files = Array.from(this.files);
@@ -210,7 +209,6 @@ const applyFilters = () => {
 };
 
 document.getElementById("minScore").addEventListener("input", debounce(applyFilters, 300));
-=======
 // ---------------- FILE PREVIEW ---------------- //
 document.getElementById("files").addEventListener("change", function () {
     const files = Array.from(this.files);
@@ -422,5 +420,4 @@ const applyFilters = () => {
 };
 
 document.getElementById("minScore").addEventListener("input", debounce(applyFilters, 300));
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90
 document.getElementById("skillFilter").addEventListener("input", debounce(applyFilters, 300));

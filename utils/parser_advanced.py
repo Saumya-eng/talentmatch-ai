@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import re
 
 
@@ -91,7 +90,7 @@ def parse_resume_details(text):
         "education": extract_education(text),
         "experience_years": extract_experience(text),
         "companies": extract_companies(text)
-=======
+        
 import re
 
 
@@ -184,5 +183,4 @@ def parse_resume_details(text):
         "education": extract_education(text),
         "experience_years": extract_experience(text),
         "companies": extract_companies(text)
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90
     }

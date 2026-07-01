@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import re
 import string
 
@@ -48,7 +47,6 @@ def clean_text(text):
     # Remove stopwords (light filtering)
     words = [word for word in words if word not in STOPWORDS]
 
-=======
 import re
 import string
 
@@ -98,5 +96,4 @@ def clean_text(text):
     # Remove stopwords (light filtering)
     words = [word for word in words if word not in STOPWORDS]
 
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90
     return " ".join(words)

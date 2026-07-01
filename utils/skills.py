@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import re
 
 # ---------------- SKILLS DATABASE WITH SYNONYMS ---------------- #
@@ -110,7 +109,6 @@ def get_missing_skills(jd_skills, resume_skills):
     """
     Return missing skills (for UI)
     """
-=======
 import re
 
 # ---------------- SKILLS DATABASE WITH SYNONYMS ---------------- #
@@ -222,5 +220,4 @@ def get_missing_skills(jd_skills, resume_skills):
     """
     Return missing skills (for UI)
     """
->>>>>>> 118300982c44287abdc232ca47b54103d0994b90
     return list(set(jd_skills) - set(resume_skills))
