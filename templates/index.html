@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,4 +72,79 @@
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TalentMatch AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1>TalentMatch AI</h1>
+        <p style="text-align:center;">AI Resume Matching System</p>
+
+        <!-- FORM -->
+        <form id="form">
+
+            <label>Job Description</label>
+            <textarea id="jd" required></textarea>
+
+            <!-- Upload -->
+            <div class="upload-box" onclick="document.getElementById('files').click()">
+                Click to upload resumes (PDF / DOCX / TXT)
+            </div>
+
+            <input type="file" id="files" name="resumes" multiple accept=".pdf,.docx,.txt" hidden>
+
+            <!-- File preview -->
+            <p id="fileNames" style="margin-top:10px; color:gray;"></p>
+
+            <button type="submit">Match Resumes</button>
+
+        </form>
+
+        <!-- FILTERS -->
+        <h3>Filters</h3>
+
+        <label>Minimum Score:</label>
+        <input type="number" id="minScore" value="50">
+
+        <label>Required Skill:</label>
+        <input type="text" id="skillFilter" placeholder="e.g. python">
+
+        <!-- RESULTS -->
+        <div id="results"></div>
+
+        <!-- CHARTS -->
+        <h3>Visualization</h3>
+
+        <!-- BAR CHART -->
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <br>
+
+        <!-- PIE CHART (SMALL) -->
+        <div class="chart-container small-chart">
+            <canvas id="pieChart"></canvas>
+        </div>
+
+    </div>
+</div>
+
+<!-- MAIN JS -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+>>>>>>> 118300982c44287abdc232ca47b54103d0994b90
 </html>
