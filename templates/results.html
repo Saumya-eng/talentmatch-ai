@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Results - TalentMatch AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Matching Results</h1>
+        <p style="text-align:center;">Ranked candidates based on ATS score</p>
+
+        <!-- RESULTS -->
+        <div id="results"></div>
+
+        <!-- CHARTS -->
+        <h3>Visualization</h3>
+        <canvas id="barChart"></canvas>
+        <br><br>
+        <canvas id="pieChart"></canvas>
+
+    </div>
+</div>
+
+<script>
+
+// ---------------- DATA FROM FLASK ---------------- //
+const results = {{ results | tojson }};
+
+// ---------------- DISPLAY RESULTS ---------------- //
+function displayResults() {
+    const container = document.getElementById("results");
+    container.innerHTML = "";
+
+    if (!results || results.length === 0) {
+        container.innerHTML = `<p class="empty-message">No results found</p>`;
+        return;
+    }
+
+    results.forEach((r, index) => {
+
+        const skills = r.skills?.join(", ") || "N/A";
+        const missing = r.missing_skills?.join(", ") || "None";
+        const education = r.education?.join(", ") || "N/A";
+        const experience = r.experience_years ?? 0;
+
+        const div = document.createElement("div");
+        div.classList.add("result-item");
+
+        // Highlight top candidate
+        if (index === 0) {
+            div.classList.add("top-candidate");
+        }
+
+        div.innerHTML = `
+            <strong>${r.filename}</strong><br>
+
+            <b>Final Score:</b> ${r.final_score}%<br>
+            <b>Skills:</b> ${skills}<br>
+            <b>Missing Skills:</b> ${missing}<br>
+            <b>Experience:</b> ${experience} years<br>
+            <b>Education:</b> ${education}<br>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:${r.final_score}%"></div>
+            </div>
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+// ---------------- CHARTS ---------------- //
+let barChart, pieChart;
+
+function renderCharts() {
+
+    const labels = results.map(r => r.filename);
+    const scores = results.map(r => r.final_score);
+
+    // BAR CHART
+    barChart = new Chart(document.getElementById("barChart"), {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Match Score (%)",
+                data: scores
+            }]
+        }
+    });
+
+    // PIE CHART
+    pieChart = new Chart(document.getElementById("pieChart"), {
+        type: "pie",
+        data: {
+            labels: labels,
+            datasets: [{
+                data: scores
+            }]
+        }
+    });
+}
+
+// ---------------- INIT ---------------- //
+displayResults();
+renderCharts();
+
+</script>
+
+</body>
+</html>

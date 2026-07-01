@@ -1,0 +1,6 @@
+Looking for a Data Analyst with strong skills in Python, SQL, Power BI, and data analysis.
+
+Requirements:
+- Experience with data visualization tools
+- Strong analytical skills
+- Knowledge of Pandas and NumPy

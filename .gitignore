@@ -1,0 +1,44 @@
+# ---------------- PYTHON ---------------- #
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ---------------- VIRTUAL ENV ---------------- #
+venv/
+env/
+rag_env/
+.venv/
+
+# ---------------- ENV FILES ---------------- #
+.env
+
+# ---------------- UPLOADS ---------------- #
+uploads/
+
+# ---------------- MODEL FILES ---------------- #
+*.pt
+*.bin
+*.h5
+
+# ---------------- CACHE / LOGS ---------------- #
+*.log
+.cache/
+*.sqlite3
+
+# ---------------- OS FILES ---------------- #
+.DS_Store
+Thumbs.db
+
+# ---------------- IDE FILES ---------------- #
+.vscode/
+.idea/
+*.swp
+
+# ---------------- JUPYTER ---------------- #
+.ipynb_checkpoints/
+
+# ---------------- TEMP FILES ---------------- #
+*.tmp
+*.bak
