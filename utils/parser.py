@@ -77,3 +77,4 @@ def extract_text(file_path):
 
     else:
         print(f"[UNSUPPORTED FILE] {file_path}")
+        return ""

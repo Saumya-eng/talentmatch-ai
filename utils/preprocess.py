@@ -46,3 +46,5 @@ def clean_text(text):
 
     # Remove stopwords (light filtering)
     words = [word for word in words if word not in STOPWORDS]
+    
+    return " ".join(words)

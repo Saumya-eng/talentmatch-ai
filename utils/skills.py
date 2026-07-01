@@ -109,3 +109,6 @@ def get_missing_skills(jd_skills, resume_skills):
     """
     Return missing skills (for UI)
     """
+    jd_set = set(jd_skills)
+    resume_set = set(resume_skills)
+    return sorted(list(jd_set - resume_set))

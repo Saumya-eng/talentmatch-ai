@@ -26,7 +26,6 @@ def compute_semantic_similarity(job_description, resumes):
     try:
         documents = [job_description] + resumes
 
-        # ✅ optimized encoding
         embeddings = model.encode(
             documents,
             normalize_embeddings=True,
@@ -41,7 +40,8 @@ def compute_semantic_similarity(job_description, resumes):
             resume_embeddings
         )[0]
 
-        return similarities.tolist()  # ✅ ensure list
+        return similarities.tolist()
 
     except Exception as e:
         print("Error in semantic similarity:", e)
+        return [0.0] * len(resumes)

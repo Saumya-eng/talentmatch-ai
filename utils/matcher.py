@@ -89,3 +89,4 @@ def rank_resumes(resume_names, scores):
 
     results = list(zip(resume_names, scores))
     results.sort(key=lambda x: x[1], reverse=True)
+    return results
