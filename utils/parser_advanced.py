@@ -90,7 +90,7 @@ def parse_resume_details(text):
         "education": extract_education(text),
         "experience_years": extract_experience(text),
         "companies": extract_companies(text)
-        
+    }
 import re
 
 
